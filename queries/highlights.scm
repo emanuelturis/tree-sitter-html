@@ -1,6 +1,12 @@
 ; Forked from nvim-treesitter
 ; https://github.com/nvim-treesitter/nvim-treesitter/blob/master/queries/html/highlights.scm
 
+(doctype) @constant
+
+"<!" @tag.delimiter
+
+(entity) @character.special
+
 (tag_name) @tag
 
 ; (erroneous_end_tag_name) @error ; we do not lint syntax errors
@@ -106,9 +112,3 @@
 ] @tag.delimiter
 
 "=" @operator
-
-(doctype) @constant
-
-"<!" @tag.delimiter
-
-(entity) @character.special
